@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logobw"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imageView12">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayChooseHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        fab:fab_labelStyle="@style/Etiquetas"
+        fab:fab_addButtonColorNormal="@color/wprimary_dark"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_add"
+            fab:fab_size="mini"
+            fab:fab_title="Add House" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_cancel"
+            fab:fab_size="mini"
+            fab:fab_title="Configuration" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_comprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_mic"
+            fab:fab_size="mini"
+            fab:fab_title="Store" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_arrow_left"
+            fab:fab_size="mini"
+            fab:fab_title="About us"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</FrameLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="56dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_heightmid"
+                android:visibility="gone"
+                android:id="@+id/llimgsAddPlace">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="8">
+
+                    <com.nicoft.bewise.WorkImageView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewWorkAddPlace"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        android:layout_weight="1" />
+
+                    <com.nicoft.bewise.HouseImageView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewHouseAddPlace"
+                        android:layout_gravity="center_horizontal"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        android:layout_weight="1" />
+
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:id="@+id/imageViewRoundAddPlace"
+                        android:layout_width="0px"
+                        android:layout_height="@dimen/flexible_space_image_heightmid"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_heightmid"
+                android:id="@+id/llimgcameraAddPlace">
+
+                <Space
+                    android:layout_width="20px"
+                    android:layout_height="0px"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Add Photo"
+                    android:id="@+id/textView5"
+                    android:layout_gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="8">
+
+                    <Space
+                        android:layout_width="0px"
+                        android:layout_height="20px"
+                        android:layout_weight="1" />
+
+                    <ImageView android:src="@drawable/ic_camera_alt_black_48dp"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/picAddPlace"
+                        android:layout_weight="2" />
+
+
+                    <Space
+                        android:layout_width="0px"
+                        android:layout_height="20px"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20px"
+                    android:layout_height="0px"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <!--  Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_name_addplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textCapWords" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--  Type Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Tipo"
+                android:id="@+id/textView4"
+                android:textSize="11dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <com.rey.material.widget.Spinner
+                style="@style/Material.Widget.Spinner"
+                android:id="@+id/spinner_tipoaddplace"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:spn_label="Spinner with arrow"
+                app:rd_style="@style/Material.Drawable.Ripple.Wave"/>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px" />
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/mapAddPlace"
+                tools:context="com.nicoft.bewise.AddPlaceActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px" />
+
+        </LinearLayout>
+
+        <com.gc.materialdesign.views.ButtonFloat
+            android:id="@+id/buttonFloatAddPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/primary"
+            materialdesign:animate="false"
+            materialdesign:iconDrawable="@drawable/ic_action_new"
+            android:layout_gravity="bottom|right" />
+    </FrameLayout>
+
+
+</FrameLayout>

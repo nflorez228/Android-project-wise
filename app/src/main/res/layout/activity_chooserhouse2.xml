@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        fab:fab_labelStyle="@style/Etiquetas"
+        fab:fab_addButtonColorNormal="@color/wprimary_dark"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_add"
+            fab:fab_size="mini"
+            fab:fab_title="Add House" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_cancel"
+            fab:fab_size="mini"
+            fab:fab_title="Configuration" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_comprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_mic"
+            fab:fab_size="mini"
+            fab:fab_title="Store" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/accion_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_icon="@drawable/ic_action_arrow_left"
+            fab:fab_size="mini"
+            fab:fab_title="About us"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/a">
+
+            <LinearLayout
+                android:id="@+id/LinearLayChooseHouse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/accent">
+
+                        <ImageView
+                            android:id="@+id/house_photo"
+                            android:layout_width="125dp"
+                            android:layout_height="200dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/a" />
+
+                        <ImageButton
+                            android:id="@+id/cameraHouseButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toLeftOf="@+id/relativeLayout"
+                            android:src="@drawable/ic_camera_alt_black_24dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/relativeLayout"
+                            android:layout_toEndOf="@+id/house_photo"
+                            android:layout_toRightOf="@+id/house_photo">
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cameraHouseButton"
+                                android:layout_toEndOf="@+id/house_photo"
+                                android:src="@drawable/toolbar_shadow"
+                                fab:srcCompat="@drawable/toolbar_shadow" />
+
+                            <Button
+                                android:id="@+id/ConfigureHouseButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_toEndOf="@+id/house_photo"
+                                android:layout_toRightOf="@+id/house_photo"
+                                android:text="CONFIGURE" />
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignTop="@+id/ConfigureHouseButton"
+                                android:layout_toEndOf="@+id/ConfigureHouseButton"
+                                android:layout_toRightOf="@+id/ConfigureHouseButton"
+                                android:text="GO" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/house_photo"
+                            android:layout_toRightOf="@+id/house_photo"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/HouseText"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:src="@drawable/ic_help"
+                                fab:srcCompat="@drawable/ic_help" />
+
+                            <TextView
+                                android:id="@+id/HouseText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/HouseTitle"
+                                android:layout_toRightOf="@+id/house_photo"
+                                android:text="Over Internet:\n http://Nicolas.en.bewise.com.co\nOver WiFi:\n internalip or http://bewisehub/"
+                                android:textColor="@color/base"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/HouseTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="NICOLAS"
+                                android:textColor="@color/aluminum"
+                                android:textSize="22sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </FrameLayout>
+
+</FrameLayout>

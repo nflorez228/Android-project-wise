@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "812640816678",
+    "firebase_url": "https://frebase-89cb0.firebaseio.com",
+    "project_id": "frebase-89cb0",
+    "storage_bucket": "frebase-89cb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812640816678:android:dabf28ef4001f8cb",
+        "android_client_info": {
+          "package_name": "com.nicoft.bewise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812640816678-llh18is7t5hm6n92ktng9hhi0a8r1fam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK_Gdg9PhtFx4tPiH6f0YsZCpFhAuCos0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

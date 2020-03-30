@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nicoft.bewise">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppThemeDR2">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PpalActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".AskForWifiActivity"
+            android:label="@string/title_activity_first_place" />
+        <activity
+            android:name=".HubConnectedActivity"
+            android:label="@string/title_activity_first_place"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.DarkWithe" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppThemeDR" />
+        <activity
+            android:name=".Main2Activity"
+            android:theme="@style/AppThemeDR2" />
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppThemeDR" />
+        <activity
+            android:name=".FlexibleSpaceWithImageWithViewPagerTabActivity"
+            android:label="@string/title_activity_flexiblespacewithimagewithviewpagertab"
+            android:theme="@style/AppTheme.Toolbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.github.ksoichiro.android.observablescrollview.samples" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstPlaceActivity"
+            android:label="@string/title_activity_first_place" />
+        <activity
+            android:name=".AddPlaceActivity"
+            android:label="@string/title_activity_add_place" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".AugmentedActivity"
+            android:label="@string/title_activity_augmented" />
+        <activity android:name=".ConectToHubActivity" />
+        <activity android:name=".ConectToHubActivity2" />
+        <activity android:name=".ConectToHubActivity3" />
+
+        <service android:name=".myFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ChooseFirstHub"
+            android:theme="@style/AppTheme.Dark2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ChooserHouse"
+            android:theme="@style/AppTheme.Dark2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ChooserHouseNotif"
+            android:theme="@style/AppTheme.Dark2"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.nicoft.bewise_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".SingleButtonAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/single_button_app_widget_info" />
+        </receiver>
+
+        <activity android:name=".SingleButtonAppWidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
